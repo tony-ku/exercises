@@ -16,15 +16,18 @@ bool find_target_sorted_array(uint32_t *nums, uint32_t size, uint32_t target)
 	uint32_t left = 0, right = size - 1;
         uint32_t val;
 
+       if (size == 0)
+        	return false;
+
 	while (left < right)
 	{
 		val = nums[left] + nums[right];
+		if (val == target)
+			return true;
 	        if (val > target)
 			right--;
 		else if (val < target)
 			left++;
-		if (val == target)
-			return true;
 	
 	}
 	return false;
