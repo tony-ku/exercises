@@ -35,6 +35,7 @@ void answer_queries(uint32_t *nums, uint32_t num_size, uint32_t queries[][2], ui
         result[i] = temp < limit;
     }
 
+    free(prefix_sums);
 }
 
 void main(void)
