@@ -75,6 +75,7 @@ The squares labeled 1 and n2 are not the starting points of any snake or ladder.
     
             vector<pair<int, int>> cells(n * n + 1);
             vector<int> columns(n);
+
             /* incrementing column */
             iota(columns.begin(), columns.end(), 0);
     
