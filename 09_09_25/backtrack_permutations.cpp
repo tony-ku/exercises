@@ -7,11 +7,14 @@ void dfsPerm(const vector<int>& nums, vector<int>& path, vector<char>& used, vec
         return;
     }
     for (size_t i = 0; i < nums.size(); ++i) {
-        if (used[i]) continue;
+        if (used[i])
+            continue;
+        // path is used
         used[i] = 1;
         path.push_back(nums[i]);
         dfsPerm(nums, path, used, result);
         path.pop_back();
+        // mark path is unused
         used[i] = 0;
     }
 }
